@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=League+Spartan:wght@700&display=swap');
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+:root{
+    --cor-fundo:#D8B4F8;
+    --cor-secundaria:#FFC7EA;
+    --cor-hover:#FF4B91;
+    --cor-fonte:#0802A3;
+    --font-principal:'League Spartan', sans-serif;
+    --font-secundaria: 'Dosis', sans-serif;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    box-sizing: border-box;
+    color: var(--cor-fonte);
+}
+
+.cabecalho{              
+    padding: 2% 1% 1% 10%;
+}
+
+.cabecalho__botoes{
+    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+    padding: 10px 50px;
+    margin: 5px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.corpo{    
+    padding: 5% 25% 9% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.corpo__texto{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1{
+    font-family: var(--font-principal);
+    color: var(--cor-fonte);
+    font-size: 2.25rem;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-between;
+    border: var(--cor-secundaria);
+    
+    
+}
+
+ul::before {
+    content: attr(aria-label); /* Usaremos o atributo 'aria-label' como título */
+    font-size: 1.75rem; /* Tamanho maior que os itens da lista */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-family: var(--font-principal); /* Aplica a fonte principal */
+}
+
+ul {
+    list-style-type: none; /* Remove o marcador padrão da lista */
+    padding: 0;
+}
+
+.rodape{
+    color: var(--cor-fonte);
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho{
+         padding: 5%;  
+    }
+    
+    .cabecalho__botoes{     
+        padding: 10px;        
+    }
+
+    .corpo{
+        flex-direction: column-reverse;
+        padding: 5% 10%;
+    }
+    .corpo__texto{
+        width: auto;
+    }
+
+    .corpo__texto__apresentacao{
+        width: auto;
+    }
+
+}
